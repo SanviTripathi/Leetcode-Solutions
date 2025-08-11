@@ -1,0 +1,28 @@
+int maximumPopulation(int** logs, int logsSize, int* logsColSize) {
+    int life[101]={0};
+    for(int i=0;i<logsSize;i++)
+    {
+        int birth=logs[i][0];
+        int death=logs[i][1];
+        life[birth-1950]++;
+        life[death-1950]--;
+    }
+    int maxpop=0;
+    int currentpop=0;
+    int maxyear=1950;
+    for(int i=0;i<101;i++)
+    {
+        currentpop+=life[i];
+        int year=1950+i;
+        if(currentpop>maxpop)
+        {
+            maxpop=currentpop;
+            maxyear=year;
+        }
+        else if(currentpop<maxpop)
+        {
+         ((maxyear<year)?maxyear:year);
+        }
+    }
+    return maxyear;
+}
