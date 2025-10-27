@@ -1,4 +1,4 @@
-METHOD 1:
+**METHOD 1:**
 
 class Solution {
 public:
@@ -16,7 +16,7 @@ public:
     }
 };
 
-METHOD 2:
+**METHOD 2:**
 
 class Solution {
 public:
